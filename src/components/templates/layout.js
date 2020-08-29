@@ -47,7 +47,7 @@ const GlobalStyle = createGlobalStyle`
 `;
 
 const SideBar = styled.div`
-    min-width: 280px;
+    max-width: 280px;
     height: 100%;
     position: fixed;
     z-index: 3;

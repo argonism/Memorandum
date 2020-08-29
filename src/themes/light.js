@@ -8,8 +8,8 @@ export default {
         overlayBack: text_color,
         header: {
             back: theme_color,
-            text: "#fff",
-            button: "#fff",
+            text: "text_color",
+            button: "text_color",
         },
     },
     side: {
