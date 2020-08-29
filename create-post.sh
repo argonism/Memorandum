@@ -1,6 +1,7 @@
 
 #!/bin/bash
 # create article with title
+
 DATE=`date '+%Y-%m-%-d'`
 YEAR=`date '+%Y'`
 TITLE=$1
