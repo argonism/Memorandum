@@ -1,62 +1,65 @@
+const theme_color = "#fff";
+const text_color = "#454545";
+
 export default {
     main: {
         defaultBack: "#fff",
-        defaultText: "#000",
-        overlayBack: "#000",
+        defaultText: text_color,
+        overlayBack: text_color,
         header: {
-            back: "#3f0f3f",
+            back: theme_color,
             text: "#fff",
-            button: "#fff"
-        }
+            button: "#fff",
+        },
     },
     side: {
-        defaultBack: "#3f0f3f",
-        defaultText: "#fff",
+        defaultBack: theme_color,
+        defaultText: text_color,
         bio: {
             circle: "#49c39e",
             defaultText: "#999",
-            activeText: "#fff"
+            activeText: text_color,
         },
         category: {
-            activeText: "#000",
-            activeBack: "#49c39e"
-        }
+            activeText: "#fff",
+            activeBack: "#49c39e",
+        },
     },
     bio: {
         defaultBack: "#fff",
-        defaultText: "#000",
+        defaultText: text_color,
         subText: "#999",
-        socialButton: "#000"
+        socialButton: "#000",
     },
     postlistitem: {
         title: "#000",
         content: "#999",
-        info: "#000"
+        info: "#000",
     },
     pagination: {
         defaultText: "#999",
-        activeText: "#fff",
-        activeBack: "#3f0f3f"
+        activeText: text_color,
+        activeBack: theme_color,
     },
     blogpost: {
-        title: "#000",
+        title: text_color,
         info: "#999",
         hr: "#999",
         content: {
             default: "#000",
             quote: "#999",
-            link: "#0687f0"
-        }
+            link: "#0687f0",
+        },
     },
     tag: {
         back: "#d9d9d9",
-        text: "#4d4d4d"
+        text: "#4d4d4d",
     },
     recentpostlist: {
         header: "#000",
-        category: "#0687f0"
+        category: "#0687f0",
     },
     recentpostitem: {
-        text: "#fff"
-    }
+        text: "#fff",
+    },
 };

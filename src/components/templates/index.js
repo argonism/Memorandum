@@ -42,6 +42,7 @@ export const pageQuery = graphql`
             sort: { fields: [frontmatter___date], order: DESC }
             skip: $skip
             limit: $limit
+            filter: { frontmatter: { draft: { eq: false } } }
         ) {
             edges {
                 node {
@@ -53,6 +54,7 @@ export const pageQuery = graphql`
                         date(formatString: "YYYY-MM-DD")
                         title
                         category
+                        draft
                         cover {
                             childImageSharp {
                                 fixed(width: 120, height: 120) {

@@ -2,7 +2,7 @@ import React, { Fragment } from "react";
 import styled, {
     css,
     createGlobalStyle,
-    ThemeProvider
+    ThemeProvider,
 } from "styled-components";
 import lightTheme from "themes/light";
 import darkTheme from "themes/dark";
@@ -28,9 +28,9 @@ const GlobalStyle = createGlobalStyle`
     }
     html, body {
         overflow: auto;
-        background-color: ${props => props.theme.main.defaultBack};
+        background-color: ${(props) => props.theme.main.defaultBack};
 
-        ${props =>
+        ${(props) =>
             props.mobileOpen &&
             css`
                 overflow: hidden;
@@ -55,11 +55,11 @@ const SideBar = styled.div`
     left: 0;
     overflow-x: hidden;
 
-    background-color: ${props => props.theme.side.defaultBack};
-    color: ${props => props.theme.side.defaultText} !important;
+    background-color: ${(props) => props.theme.side.defaultBack};
+    color: ${(props) => props.theme.side.defaultText} !important;
 
     transition: margin 0.5s;
-    margin-left: ${props => (props.mobileOpen ? 0 : "-280px")};
+    margin-left: ${(props) => (props.mobileOpen ? 0 : "-280px")};
 
     @media all and (min-width: 992px) {
         min-width: 280px;
@@ -71,7 +71,7 @@ const Main = styled.div`
     margin-top: 50px;
     margin-left: 0;
 
-    color: ${props => props.theme.main.defaultText} !important;
+    color: ${(props) => props.theme.main.defaultText} !important;
 
     @media all and (min-width: 992px) {
         margin-top: 0;
@@ -85,7 +85,7 @@ const MainOverlay = styled.div`
     left: 0;
     height: 100%;
     width: 100%;
-    background-color: ${props => props.theme.main.overlayBack};
+    background-color: ${(props) => props.theme.main.overlayBack};
     opacity: 0.8;
 
     z-index: 2;
@@ -100,14 +100,14 @@ export default class Layout extends React.Component {
         super(props);
         this.state = {
             mobile_side: false,
-            isDarkMode: false
+            isDarkMode: false,
         };
     }
 
-    sideToggle = e => {
+    sideToggle = (e) => {
         const open = !this.state.mobile_side;
         this.setState({
-            mobile_side: open
+            mobile_side: open,
         });
     };
 

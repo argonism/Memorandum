@@ -1,8 +1,9 @@
 ---
 title: Hello World
 date: "2019-05-01"
+draft: true
 category: Trip
-tags: 
+tags:
     - helloworld
 cover: ./helloworld.png
 ---
@@ -12,6 +13,7 @@ cover: ./helloworld.png
 First post.
 
 Highlight code block.
+
 ```css
 /* css */
 h1 {

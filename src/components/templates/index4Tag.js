@@ -8,12 +8,9 @@ const TagsTemplate = ({ location, pageContext, data }) => {
     const tag = pageContext.tag;
 
     return (
-        <Layout
-            location={location}
-            title={`Tag: ${tag}`}
-        >
+        <Layout location={location} title={`Tag: ${tag}`}>
             <div>
-                <SEO title={`Tag: ${tag}`} keywords={[tag]}/>
+                <SEO title={`Tag: ${tag}`} keywords={[tag]} />
 
                 <PostList
                     data={data.allMarkdownRemark.edges}
@@ -35,7 +32,9 @@ export const pageQuery = graphql`
         }
         allMarkdownRemark(
             sort: { fields: [frontmatter___date], order: DESC }
-            filter: { frontmatter: { tags: { in: [$tag] } } }
+            filter: {
+                frontmatter: { tags: { in: [$tag] }, draft: { eq: false } }
+            }
             skip: $skip
             limit: $limit
         ) {

@@ -1,6 +1,7 @@
 ---
 title: I Love CaffeLatte
 date: "2019-05-02"
+draft: true
 category: "Coffee"
 tags:
     - caffelatte

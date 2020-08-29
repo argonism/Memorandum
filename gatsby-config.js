@@ -17,7 +17,7 @@ module.exports = {
         photo: siteConfig.photo,
         social: siteConfig.social,
         category: siteConfig.category,
-        pageListSize: siteConfig.pageListSize
+        pageListSize: siteConfig.pageListSize,
     },
     plugins: [
         `gatsby-transformer-sharp`,
@@ -26,15 +26,15 @@ module.exports = {
             resolve: `gatsby-source-filesystem`,
             options: {
                 path: `${__dirname}/content/blog`,
-                name: `blog`
-            }
+                name: `blog`,
+            },
         },
         {
             resolve: `gatsby-source-filesystem`,
             options: {
                 path: `${__dirname}/content/assets`,
-                name: `assets`
-            }
+                name: `assets`,
+            },
         },
         {
             resolve: `gatsby-transformer-remark`,
@@ -44,14 +44,14 @@ module.exports = {
                     {
                         resolve: `gatsby-remark-images`,
                         options: {
-                            maxWidth: 590
-                        }
+                            maxWidth: 590,
+                        },
                     },
                     {
                         resolve: `gatsby-remark-responsive-iframe`,
                         options: {
-                            wrapperStyle: `margin-bottom: 1.0725rem`
-                        }
+                            wrapperStyle: `margin-bottom: 1.0725rem`,
+                        },
                     },
                     {
                         resolve: `gatsby-remark-prismjs`,
@@ -66,21 +66,21 @@ module.exports = {
                                     language: "superscript",
                                     extend: "javascript",
                                     definition: {
-                                        superscript_types: /(SuperType)/
+                                        superscript_types: /(SuperType)/,
                                     },
                                     insertBefore: {
                                         function: {
-                                            superscript_keywords: /(superif|superelse)/
-                                        }
-                                    }
-                                }
-                            ]
-                        }
+                                            superscript_keywords: /(superif|superelse)/,
+                                        },
+                                    },
+                                },
+                            ],
+                        },
                     },
                     `gatsby-remark-copy-linked-files`,
-                    `gatsby-remark-smartypants`
-                ]
-            }
+                    `gatsby-remark-smartypants`,
+                ],
+            },
         },
         {
             resolve: "gatsby-plugin-root-import",
@@ -90,32 +90,26 @@ module.exports = {
                 components: `${__dirname}/src/components`,
                 pages: `${__dirname}/src/pages`,
                 utils: `${__dirname}/src/utils`,
-                themes: `${__dirname}/src/themes`
-            }
+                themes: `${__dirname}/src/themes`,
+            },
         },
         {
             resolve: `gatsby-plugin-google-analytics`,
             options: {
                 trackingId: siteConfig.googleAnalyticsId,
-                head: true
-            }
+                head: true,
+            },
         },
         `gatsby-plugin-offline`,
         `gatsby-plugin-react-helmet`,
         {
             resolve: `gatsby-plugin-typography`,
             options: {
-                pathToConfigModule: `src/utils/typography`
-            }
+                pathToConfigModule: `src/utils/typography`,
+            },
         },
         {
-            resolve: `gatsby-plugin-s3`,
-            options: {
-                bucketName: siteConfig.s3Bucket
-            }
+            resolve: `gatsby-plugin-styled-components`,
         },
-        {
-            resolve: `gatsby-plugin-styled-components`
-        }
-    ]
+    ],
 };

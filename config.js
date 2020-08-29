@@ -1,31 +1,27 @@
 module.exports = {
     url: "http://demo.nagui.me",
-    title: "Nagui Starter",
-    lang: "ko",
+    title: "ush",
+    lang: "jp",
     description: "Gatsby Starter Nagui",
     defaultKeywords: [`blog`, `gatsby`, `javascript`, `react`, `kimnagui`],
     defaultMetaImage: "/defaultmetaimage.png",
 
-    authorNickName: "KimNagui",
-    authorFullName: "KimGwangHyeon",
-    authorDescription: "I Love CaffeLatte",
+    authorNickName: "ush",
+    authorFullName: "ush",
+    authorDescription: "argv[0] = ush",
     photo: "content/assets/profile-pic.png",
 
     // icon : FontAwesome
     category: [
         {
-            id: "Coffee",
-            icon: "fa-coffee"
+            id: "Diary",
+            icon: "fa-book",
         },
-        {
-            id: "Trip",
-            icon: "fa-plane-departure"
-        }
     ],
 
     social: {
         email: "calrosban@gmail.com",
-        github: "https://github.com/kimnagui"
+        github: "https://github.com/argonism",
     },
 
     postsPerPage: 5,
@@ -33,5 +29,4 @@ module.exports = {
 
     copyright: "© All rights reserved.",
     googleAnalyticsId: "UA-143311992-2",
-    s3Bucket: "demo.nagui.me"
 };

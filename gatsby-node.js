@@ -14,6 +14,7 @@ exports.createPages = ({ graphql, actions }) => {
                 allMarkdownRemark(
                     sort: { fields: [frontmatter___date], order: DESC }
                     limit: 1000
+                    filter: { frontmatter: { draft: { eq: false } } }
                 ) {
                     edges {
                         node {
@@ -23,22 +24,16 @@ exports.createPages = ({ graphql, actions }) => {
                             frontmatter {
                                 title
                                 tags
-                                category
                                 date(formatString: "YYYY-MM-DD")
-                                cover {
-                                    childImageSharp {
-                                        fixed(width: 1000) {
-                                            src
-                                        }
-                                    }
-                                }
+                                draft
+                                category
                             }
                         }
                     }
                 }
             }
         `
-    ).then(result => {
+    ).then((result) => {
         if (result.errors) {
             throw result.errors;
         }
@@ -80,7 +75,7 @@ exports.createPages = ({ graphql, actions }) => {
 
                 recentCategoryPosts = {
                     ...recentCategoryPosts,
-                    [cat]: list
+                    [cat]: list,
                 };
             }
 
@@ -93,8 +88,8 @@ exports.createPages = ({ graphql, actions }) => {
                     slug: post.node.fields.slug,
                     previous,
                     next,
-                    recent
-                }
+                    recent,
+                },
             });
         });
 
@@ -103,10 +98,10 @@ exports.createPages = ({ graphql, actions }) => {
             items: posts,
             itemsPerPage: siteConfig.postsPerPage,
             pathPrefix: "/",
-            component: path.resolve("./src/components/templates/index.js")
+            component: path.resolve("./src/components/templates/index.js"),
         });
 
-        category.forEach(cat => {
+        category.forEach((cat) => {
             const catEdges = posts.filter(
                 ({ node }) =>
                     node.frontmatter.category &&
@@ -121,12 +116,12 @@ exports.createPages = ({ graphql, actions }) => {
                     "./src/components/templates/index4Category.js"
                 ),
                 context: {
-                    category: `${cat}`
-                }
+                    category: `${cat}`,
+                },
             });
         });
 
-        tags.forEach(tag => {
+        tags.forEach((tag) => {
             const tagEdges = posts.filter(
                 ({ node }) =>
                     node.frontmatter.tags && node.frontmatter.tags.includes(tag)
@@ -140,8 +135,8 @@ exports.createPages = ({ graphql, actions }) => {
                     "./src/components/templates/index4Tag.js"
                 ),
                 context: {
-                    tag: `${tag}`
-                }
+                    tag: `${tag}`,
+                },
             });
         });
 
@@ -157,7 +152,7 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
         createNodeField({
             name: `slug`,
             node,
-            value
+            value,
         });
     }
 };

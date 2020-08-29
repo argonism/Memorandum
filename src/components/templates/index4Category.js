@@ -14,7 +14,7 @@ const CategoryList = ({ location, pageContext, data }) => {
             activeMenu={category}
         >
             <div>
-                <SEO title={`Category: ${category}`} keywords={[category]}/>
+                <SEO title={`Category: ${category}`} keywords={[category]} />
 
                 <PostList
                     data={data.allMarkdownRemark.edges}
@@ -36,9 +36,14 @@ export const pageQuery = graphql`
         }
         allMarkdownRemark(
             sort: { fields: [frontmatter___date], order: DESC }
-            filter: { frontmatter: { category: { eq: $category } } }
             skip: $skip
             limit: $limit
+            filter: {
+                frontmatter: {
+                    draft: { eq: false }
+                    category: { eq: $category }
+                }
+            }
         ) {
             totalCount
             edges {
@@ -52,6 +57,7 @@ export const pageQuery = graphql`
                         date(formatString: "YYYY-MM-DD")
                         category
                         tags
+                        draft
                         cover {
                             childImageSharp {
                                 fixed(width: 120, height: 120) {

@@ -3,9 +3,13 @@ import PostListItem from "components/molecules/postListItem";
 import Pagination from "components/molecules/pagination";
 
 const PostList = ({ data, page, path, pageListSize }) => {
+    const posts = data.filter((post) => {
+        return !post.node.frontmatter.draft;
+    });
+    console.log(posts);
     return (
         <Fragment>
-            {data.map(({ node }) => {
+            {posts.map(({ node }) => {
                 return <PostListItem key={node.fields.slug} node={node} />;
             })}
             {page && (
