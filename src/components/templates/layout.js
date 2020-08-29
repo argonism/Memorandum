@@ -49,11 +49,12 @@ const GlobalStyle = createGlobalStyle`
 const SideBar = styled.div`
     max-width: 280px;
     height: 100%;
-    position: fixed;
     z-index: 3;
-    top: 0;
+    /* position: sticky;
+    top: 0; */
+    /* top: 0;
     left: 0;
-    overflow-x: hidden;
+    overflow-x: hidden; */
 
     background-color: ${(props) => props.theme.side.defaultBack};
     color: ${(props) => props.theme.side.defaultText} !important;
@@ -68,15 +69,15 @@ const SideBar = styled.div`
 `;
 
 const Main = styled.div`
-    margin-top: 50px;
+    margin-top: 20px;
     margin-left: 0;
 
     color: ${(props) => props.theme.main.defaultText} !important;
 
-    @media all and (min-width: 992px) {
+    /* @media all and (min-width: 992px) {
         margin-top: 0;
         margin-left: 280px !important;
-    }
+    } */
 `;
 
 const MainOverlay = styled.div`
@@ -93,6 +94,18 @@ const MainOverlay = styled.div`
     @media all and (min-width: 992px) {
         display: none;
     }
+`;
+
+const Wrapper = styled.div`
+    display: flex;
+    flex-direction: row;
+    max-width: 1200px;
+    margin: auto;
+`;
+
+const SideBarWrapper = styled.div`
+    position: fixed;
+    top: 0;
 `;
 
 export default class Layout extends React.Component {
@@ -116,17 +129,19 @@ export default class Layout extends React.Component {
         const { mobile_side, isDarkMode } = this.state;
         return (
             <ThemeProvider theme={isDarkMode ? darkTheme : lightTheme}>
-                <Fragment>
+                <Wrapper>
                     <GlobalStyle mobileOpen={mobile_side} />
                     <SideBar mobileOpen={mobile_side}>
-                        <SideHeader />
-                        <SideContent activeMenu={activeMenu} />
-                        <SideFooter>
-                            {/* <ThemeSwitch
-                                onChange={this.themeToggle}
-                                checked={isDarkMode}
-                            /> */}
-                        </SideFooter>
+                        <SideBarWrapper>
+                            <SideHeader />
+                            <SideContent activeMenu={activeMenu} />
+                            <SideFooter>
+                                {/* <ThemeSwitch
+                                    onChange={this.themeToggle}
+                                    checked={isDarkMode}
+                                /> */}
+                            </SideFooter>
+                        </SideBarWrapper>
                     </SideBar>
                     <Main>
                         {mobile_side && (
@@ -135,7 +150,7 @@ export default class Layout extends React.Component {
                         <MainHeader sideToggle={this.sideToggle} />
                         <MainContent>{children}</MainContent>
                     </Main>
-                </Fragment>
+                </Wrapper>
             </ThemeProvider>
         );
     }
