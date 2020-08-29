@@ -48,20 +48,22 @@ const GlobalStyle = createGlobalStyle`
 
 const SideBar = styled.div`
     max-width: 280px;
-    height: 100%;
+    height: 100vh;
     z-index: 3;
-    /* position: sticky;
-    top: 0; */
-    /* top: 0;
-    left: 0;
-    overflow-x: hidden; */
 
     background-color: ${(props) => props.theme.side.defaultBack};
     color: ${(props) => props.theme.side.defaultText} !important;
 
     transition: margin 0.5s;
-    margin-left: ${(props) => (props.mobileOpen ? 0 : "-280px")};
+    margin-left: ${(props) => (props.mobileOpen ? 0 : "-281px")};
+    position: fixed;
+    top: 0;
+    height: 100vh;
 
+    @media all and (max-width: 992px) {
+        position: auto;
+        top: auto;
+    }
     @media all and (min-width: 992px) {
         min-width: 280px;
         margin-left: 0 !important;
@@ -69,15 +71,15 @@ const SideBar = styled.div`
 `;
 
 const Main = styled.div`
-    margin-top: 20px;
-    margin-left: 0;
+    margin-top: ${(props) => (props.mobileOpen ? 0 : "50px")};
 
+    margin-left: 0;
     color: ${(props) => props.theme.main.defaultText} !important;
 
-    /* @media all and (min-width: 992px) {
+    @media all and (min-width: 992px) {
         margin-top: 0;
         margin-left: 280px !important;
-    } */
+    }
 `;
 
 const MainOverlay = styled.div`
@@ -104,8 +106,14 @@ const Wrapper = styled.div`
 `;
 
 const SideBarWrapper = styled.div`
-    position: fixed;
+    /* position: fixed;
     top: 0;
+    height: 100vh;
+
+    @media all and (max-width: 992px) {
+        position: auto;
+        top: auto;
+    } */
 `;
 
 export default class Layout extends React.Component {

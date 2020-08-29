@@ -4,7 +4,6 @@ import styled from "styled-components";
 const StyledMainContent = styled.section`
     overflow: auto;
     padding: 20px;
-    width: 100%;
 
     @media all and (min-width: 992px) {
         padding: 50px 75px;
