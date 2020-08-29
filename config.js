@@ -1,9 +1,16 @@
 module.exports = {
     url: "http://demo.nagui.me",
-    title: "ush",
+    title: "ush memorandum",
     lang: "jp",
-    description: "Gatsby Starter Nagui",
-    defaultKeywords: [`blog`, `gatsby`, `javascript`, `react`, `kimnagui`],
+    description: "Memorandum of ush",
+    defaultKeywords: [
+        `blog`,
+        `gatsby`,
+        `javascript`,
+        `react`,
+        `ush`,
+        `argonism`,
+    ],
     defaultMetaImage: "/defaultmetaimage.png",
 
     authorNickName: "ush",
@@ -20,7 +27,7 @@ module.exports = {
     ],
 
     social: {
-        email: "calrosban@gmail.com",
+        email: "",
         github: "https://github.com/argonism",
     },
 

@@ -6,7 +6,6 @@ const PostList = ({ data, page, path, pageListSize }) => {
     const posts = data.filter((post) => {
         return !post.node.frontmatter.draft;
     });
-    console.log(posts);
     return (
         <Fragment>
             {posts.map(({ node }) => {
