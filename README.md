@@ -1,77 +1,12 @@
-# gatsby-starter-nagui
+[![Netlify Status](https://api.netlify.com/api/v1/badges/5f04b7d1-ad0d-446b-ace9-ee1f28b8180e/deploy-status)](https://app.netlify.com/sites/romantic-tesla-5e7165/deploys)
 
-<img src="./content/assets/demo-pc.gif" width="500">
+# 備忘録
 
-<img src="./content/assets/demo-mobile.gif" height="325">
+https://www.argonism.info
 
-## :computer: Demo
-
--   <http://demo.nagui.me/>
-
-## :rocket: Quick Start
-
-### 1. Install gatsby-cli
-
-```sh
-$ npm install -g gatsby-cli
-```
-
-### 2. Create Project
-
-```sh
-$ gatsby new my-blog-starter https://github.com/kimnagui/gatsby-starter-nagui
-```
-
-### 3. Start Project
-
-```sh
-$ cd my-blog-starter
-$ gatsbyjs develop
-# open http://localhost:8000
-```
-
-## :star: Features
-
--   Tags & Categorys.
--   Pagination.
--   Styled-Components.
--   Atomic Design Components.
--   Mobile-First CSS.
--   Syntax highlighting in code blocks using PrismJS(Dracula).
--   Google Analytics.
--   Deploy AWS S3.
--   Emoji.
-
-## :open_file_folder: Structure
+forcked from gatsby-starter-nagui
+https://github.com/kimnagui/gatsby-starter-nagui
 
 ```
-src
- ├── components
- │     ├── atoms
- │     ├── molecules
- │     ├── organisms
- │     ├── templates
- │     └── seo.js
- ├── pages
- │     └── 404.js
- ├── utils
- │     └──typography.js
- └── html.js
-```
-
-## :wrench: Config Files
 
 ```
-config.js
-gatsby-browser.js
-gatsby-config.js
-gatsby-node.js
-```
-
-## :dart: Todo
-
--   Comment
--   Search
--   Bio in post
--   Design Tag & Category Index
--   Dark Mode
