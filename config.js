@@ -24,6 +24,10 @@ module.exports = {
             id: "Diary",
             icon: "fa-book",
         },
+        {
+            id: "CTF",
+            icon: "fa-flag",
+        },
     ],
 
     social: {
