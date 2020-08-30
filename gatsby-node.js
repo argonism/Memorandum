@@ -27,6 +27,13 @@ exports.createPages = ({ graphql, actions }) => {
                                 date(formatString: "YYYY-MM-DD")
                                 draft
                                 category
+                                cover {
+                                    childImageSharp {
+                                        fluid(maxWidth: 500) {
+                                            src
+                                        }
+                                    }
+                                }
                             }
                         }
                     }

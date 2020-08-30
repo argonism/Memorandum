@@ -8,7 +8,7 @@ const Container = styled.div`
     width: 100%;
 
     @media all and (min-width: 992px) {
-        display: ${props => props.display || "inline-block"};
+        display: ${(props) => props.display || "inline-block"};
         width: 25%;
     }
 `;
@@ -18,7 +18,7 @@ const Cover = styled(Link)`
     margin: 0 !important;
     width: 100%;
     height: 100px;
-    background-image: url(${props => props.image});
+    background-image: url(${(props) => props.image});
     background-size: cover;
     background-position: 50% 50%;
     border-radius: 10px;
@@ -33,7 +33,7 @@ const Cover = styled(Link)`
         justify-content: flex-end;
         height: 100%;
         background-color: rgba(0, 0, 0, 0.6);
-        color: ${props => props.theme.recentpostitem.text};
+        color: ${(props) => props.theme.recentpostitem.text};
         padding: 10px;
         border-radius: inherit;
 
@@ -54,7 +54,7 @@ const Cover = styled(Link)`
 const RecentPostItem = ({ data }) => {
     const link = data.node.fields.slug;
     const node = data.node.frontmatter;
-    const image = !!node.cover ? node.cover.childImageSharp.fixed.src : "";
+    const image = !!node.cover ? node.cover.childImageSharp.fluid.src : "";
     return (
         <Container>
             <Cover image={image} to={link}>

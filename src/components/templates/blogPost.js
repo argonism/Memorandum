@@ -12,26 +12,26 @@ const PostHeader = styled.div`
         padding: 0;
         margin-bottom: 10px;
         border: none;
-        color: ${props => props.theme.blogpost.title};
+        color: ${(props) => props.theme.blogpost.title};
     }
 
     hr {
         margin: 20px 0 40px 0;
-        background-color: ${props => props.theme.blogpost.hr};
+        background-color: ${(props) => props.theme.blogpost.hr};
     }
 
     div {
-        color: ${props => props.theme.blogpost.info};
+        color: ${(props) => props.theme.blogpost.info};
         #circle {
-            background-color: ${props => props.theme.blogpost.info};
+            background-color: ${(props) => props.theme.blogpost.info};
         }
     }
 `;
 
 const PostContent = styled.div`
-    color: ${props => props.theme.blogpost.content.default};
+    color: ${(props) => props.theme.blogpost.content.default};
     a {
-        color: ${props => props.theme.blogpost.content.link};
+        color: ${(props) => props.theme.blogpost.content.link};
         &:hover {
             text-decoration: underline;
         }
@@ -49,8 +49,8 @@ const PostContent = styled.div`
         margin-left: 0;
         margin-right: 0;
         padding-left: calc(0.8125rem - 1px);
-        border-left: 4px solid ${props => props.theme.blogpost.content.quote};
-        color: ${props => props.theme.blogpost.content.quote};
+        border-left: 4px solid ${(props) => props.theme.blogpost.content.quote};
+        color: ${(props) => props.theme.blogpost.content.quote};
     }
 `;
 
@@ -59,7 +59,7 @@ const PostFooter = styled.div`
 
     hr {
         margin: 20px 0;
-        background-color: ${props => props.theme.blogpost.hr};
+        background-color: ${(props) => props.theme.blogpost.hr};
     }
 `;
 
@@ -72,10 +72,10 @@ class BlogPost extends React.Component {
             date,
             category,
             tags,
-            cover
+            cover,
         } = this.props.data.markdownRemark.frontmatter;
         const { recent } = this.props.pageContext;
-
+        console.log(recent);
         return (
             <Layout
                 location={this.props.location}
