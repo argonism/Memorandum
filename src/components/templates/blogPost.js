@@ -75,7 +75,6 @@ class BlogPost extends React.Component {
             cover,
         } = this.props.data.markdownRemark.frontmatter;
         const { recent } = this.props.pageContext;
-        console.log(recent);
         return (
             <Layout
                 location={this.props.location}
