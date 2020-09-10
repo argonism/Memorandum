@@ -1,0 +1,13 @@
+Digest username="q9", realm="secret", nonce="bbKtsfbABAA=5dad3cce7a7dd2c3335c9b400a19d6ad02df299b", uri="/~q9/", algorithm=MD5, response="c3077454ecf09ecef1d6c1201038cfaf", qop=auth, nc=00000001, cnonce="9691c249745d94fc"
+
+Digest realm="secret", nonce="bbKtsfbABAA=5dad3cce7a7dd2c3335c9b400a19d6ad02df299b", algorithm=MD5, qop="auth"
+
+
+
+Digest username="q9", realm="secret", nonce="bbKtsfbABAA=5dad3cce7a7dd2c3335c9b400a19d6ad02df299b", uri="/~q9/htdigest", algorithm=MD5, response="d9f18946e5587401c303b34e00a059eb", qop=auth, nc=00000002, cnonce="6945eb2a7ba8cf7f"
+
+Authentication-Info: rspauth="022023eac9b9e023d50cca5eef69c287", cnonce="6945eb2a7ba8cf7f", nc=00000002, qop=auth
+
+
+
+Digest username="q9", realm="secret", nonce="setv8wCuBQA=c8840a4406f14039102e07e839c7859ad0f4d650", uri="/~q9/flag.html", algorithm=MD5, response="64c217a3955cc8050432d43e5f6c39cb", qop=auth, nc=00000001, cnonce="e79e26e0d17c978d"

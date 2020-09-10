@@ -35,8 +35,8 @@ module.exports = {
         github: "https://github.com/argonism",
     },
 
-    postsPerPage: 5,
-    pageListSize: 5,
+    postsPerPage: 10,
+    pageListSize: 10,
 
     copyright: "© All rights reserved.",
     googleAnalyticsId: "UA-143311992-2",

@@ -6,7 +6,7 @@ DATE=`date '+%Y-%m-%-d'`
 YEAR=`date '+%Y'`
 TITLE=$1
 if [ $# -lt 1 ]; then
-  echo 'usage: {this program} ${title}'
+  echo 'usage: {this program} {title} {category} {tag}'
   echo "title is required to create article.\n"
   exit 1
 fi
