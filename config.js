@@ -15,7 +15,7 @@ module.exports = {
 
     authorNickName: "ush",
     authorFullName: "ush",
-    authorDescription: "argv[0] = ush",
+    authorDescription: "master of universe",
     photo: "content/assets/profile-pic.png",
 
     // icon : FontAwesome
@@ -33,6 +33,7 @@ module.exports = {
     social: {
         email: "",
         github: "https://github.com/argonism",
+        twitter: "https://twitter.com/argo_nism",
     },
 
     postsPerPage: 10,
