@@ -8,7 +8,7 @@ import { StaticQuery, graphql, Link } from "gatsby";
 const Container = styled.header`
     padding: 20px;
     font-size: 15px;
-    background-color: ${props => props.theme.side.defaultBack};
+    background-color: ${(props) => props.theme.side.defaultBack};
 `;
 
 const BioContainer = styled.div`
@@ -17,10 +17,10 @@ const BioContainer = styled.div`
     & > div {
         width: 240px;
         border-radius: 6px;
-        padding: 8px;
+        padding: 10px 20px;
         top: 125%;
-        color: ${props => props.theme.bio.defaultText};
-        background-color: ${props => props.theme.bio.defaultBack};
+        color: ${(props) => props.theme.bio.defaultText};
+        background-color: ${(props) => props.theme.bio.defaultBack};
         &:after {
             bottom: 99%;
             left: 25%;
@@ -28,19 +28,19 @@ const BioContainer = styled.div`
             border-width: 7px;
             border-style: solid;
             border-color: transparent transparent
-                ${props => props.theme.bio.defaultBack} transparent;
+                ${(props) => props.theme.bio.defaultBack} transparent;
         }
     }
 `;
 
 const Author = styled.span`
-    color: ${props =>
+    color: ${(props) =>
         props.changeColor
             ? props.theme.side.bio.activeText
             : props.theme.side.bio.defaultText};
 
     #circle {
-        background-color: ${props => props.theme.side.bio.circle};
+        background-color: ${(props) => props.theme.side.bio.circle};
     }
 
     i {
@@ -54,7 +54,7 @@ const Author = styled.span`
 
     &:hover {
         cursor: pointer;
-        color: ${props => props.theme.side.bio.activeText};
+        color: ${(props) => props.theme.side.bio.activeText};
     }
 `;
 
@@ -72,15 +72,18 @@ const SideHeader = () => {
     return (
         <StaticQuery
             query={query}
-            render={data => {
+            render={(data) => {
                 const node = data.site.siteMetadata;
                 return (
                     <Container>
                         <BlogTitle to={"/"}>{node.title}</BlogTitle>
                         <BioContainer>
                             <Author
-                                onClick={() => setBioOpen(true)}
+                                onClick={() => {
+                                    setBioOpen(!bioOpen);
+                                }}
                                 changeColor={bioOpen}
+                                className="ignore-react-onclickoutside"
                             >
                                 <Circle size={"13"} />
                                 <span>{node.authorNickName}</span>

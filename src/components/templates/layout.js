@@ -72,6 +72,7 @@ const SideBar = styled.div`
 
 const Main = styled.div`
     margin-top: ${(props) => (props.mobileOpen ? 0 : "50px")};
+    max-width: 920px;
 
     margin-left: 0;
     color: ${(props) => props.theme.main.defaultText} !important;

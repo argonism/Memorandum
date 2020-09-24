@@ -29,12 +29,12 @@ export default {
         defaultBack: "#fff",
         defaultText: text_color,
         subText: "#999",
-        socialButton: "#000",
+        socialButton: "#454545",
     },
     postlistitem: {
-        title: "#000",
+        title: "#333",
         content: "#999",
-        info: "#000",
+        info: "#333",
     },
     pagination: {
         defaultText: "#999",
@@ -46,7 +46,7 @@ export default {
         info: "#999",
         hr: "#999",
         content: {
-            default: "#000",
+            default: "#333",
             quote: "#999",
             link: "#0687f0",
         },
@@ -56,7 +56,7 @@ export default {
         text: "#4d4d4d",
     },
     recentpostlist: {
-        header: "#000",
+        header: "#333",
         category: "#0687f0",
     },
     recentpostitem: {

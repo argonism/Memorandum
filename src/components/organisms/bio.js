@@ -35,7 +35,7 @@ const BioNameAndPhoto = styled.div`
             font-weight: bold;
         }
         div:last-child {
-            color: ${props => props.theme.bio.subText};
+            color: ${(props) => props.theme.bio.subText};
         }
     }
 `;
@@ -48,7 +48,7 @@ const BioSocial = styled.div`
         display: block;
         margin-bottom: 5px;
         cursor: pointer;
-        color: ${props => props.theme.bio.socialButton};
+        color: ${(props) => props.theme.bio.socialButton};
     }
 
     span {
@@ -60,12 +60,12 @@ const Bio = () => {
     return (
         <StaticQuery
             query={bioQuery}
-            render={data => {
+            render={(data) => {
                 const {
                     authorNickName,
                     authorFullName,
                     authorDescription,
-                    social
+                    social,
                 } = data.site.siteMetadata;
                 return (
                     <Container>
