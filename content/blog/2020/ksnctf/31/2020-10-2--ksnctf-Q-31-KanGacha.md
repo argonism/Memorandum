@@ -3,7 +3,8 @@ title: ksnctf-Q-31-KanGacha
 date: "2020-10-2"
 draft: false
 category: "CTF"
-tags: \n    - "ksnctf"
+tags:
+    - "ksnctf"
 cover: "../media/"
 ---
 
