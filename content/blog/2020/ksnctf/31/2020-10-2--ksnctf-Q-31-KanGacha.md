@@ -1,6 +1,6 @@
 ---
-title: ksnctf-Q-31-KanGacha
-date: "2020-10-2"
+title: ksnctf Q.31 KanGacha
+date: "2020-10-02"
 draft: false
 category: "CTF"
 tags:

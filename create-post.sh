@@ -12,7 +12,7 @@ ShapeTitle () {
     echo $1 | sed 's/[\. ]/-/g'
 }
 
-DATE=`date '+%Y-%m-%-d'`
+DATE=`date '+%Y-%m-%d'`
 YEAR=`date '+%Y'`
 TITLE=`ShapeTitle "$1"`
 
