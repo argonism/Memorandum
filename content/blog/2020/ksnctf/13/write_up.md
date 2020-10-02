@@ -19,6 +19,8 @@ readme.txt と、他に flag.txt proverb.txt proverb の 4 つファイルがあ
 
 ![ls](ls.png)
 
+# 調べる
+
 ここで、これらのファイル全て、write 権限が無いことに気づく。
 
 ディレクトリにも書き込み権限はない。
