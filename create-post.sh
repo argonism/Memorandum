@@ -14,7 +14,8 @@ ShapeTitle () {
 
 DATE=`date '+%Y-%m-%d'`
 YEAR=`date '+%Y'`
-TITLE=`ShapeTitle "$1"`
+TITLE=$1
+FILE_TITLE=`ShapeTitle "$1"`
 
 # set Category
 CATEGORY=$2
@@ -34,7 +35,7 @@ do
 done
 
 # set filename
-FORMAT="+%Y-%m-%-d--${TITLE}"
+FORMAT="+%Y-%m-%-d--${FILE_TITLE}"
 FILENAME=`date ${FORMAT}`
 
 # set generate target path
