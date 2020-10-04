@@ -57,4 +57,5 @@ tags: ${TAGS}
 cover: '../media/'
 ---" > $ARTICLE_PATH
 
+code $SCRIPT_DIR
 code $ARTICLE_PATH
