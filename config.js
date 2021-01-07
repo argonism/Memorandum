@@ -28,6 +28,10 @@ module.exports = {
             id: "CTF",
             icon: "fa-flag",
         },
+        {
+            id: "Rails",
+            icon: "fa-gem",
+        }
     ],
 
     social: {
