@@ -29,6 +29,10 @@ module.exports = {
             icon: "fa-flag",
         },
         {
+            id: "Competitive",
+            icon: "fa-trophy",
+        },
+        {
             id: "Rails",
             icon: "fa-gem",
         }
